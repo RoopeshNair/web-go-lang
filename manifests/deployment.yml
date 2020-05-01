@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: rgosample 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rgosample 
+    spec:
+      containers:
+        - name: rgosample 
+          image: ronacr.azurecr.io/rgosample
+          ports:
+          - containerPort: 80
